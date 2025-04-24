@@ -48,7 +48,7 @@ export default function Carousel() {
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.3 }}
             > 
-              Réserver 
+              Devis gratuit
             </motion.a>
             <motion.a 
               className={styles.btn} 
@@ -62,7 +62,7 @@ export default function Carousel() {
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.3 }}
             > 
-              Voir toutes les photos 
+              Nos réalisations 
             </motion.a>
            
         </div>
