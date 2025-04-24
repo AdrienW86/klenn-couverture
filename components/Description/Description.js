@@ -26,7 +26,7 @@ export default function Description() {
       <section className={styles.description}>
         <div className={styles.box}>
           <h2 className={styles.h2}>
-            Localisation
+            Zone d'intervention
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ export default function Description() {
           <h2
             className={styles.h2}
           >
-            Pourquoi séjourner au Château de Projan ?
+            Pourquoi choisir Elite toiture ?
           </h2>
         </div>
 
@@ -121,7 +121,7 @@ export default function Description() {
                 }}
                 exit={{ opacity: 0, x: 100 }}
                 transition={{ duration: 0.5 }}
-                src="/image13.jpg"
+                src="/image10.jpg"
                 alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
                 width={200}
                 height={200}

@@ -27,7 +27,7 @@
   
 .btnContainer {
     position: absolute;
-    color: red;
+    color: rgb(0,191,99); 
     z-index: 2;
     width: 100%;
     bottom: 100px;
@@ -38,9 +38,9 @@
 .btn {
     padding: 8px;
     border-radius: 16px;
-    border: 1px solid #b88917;
+    border: 1px solid rgb(0,191,99);
     background-color: rgb(255, 255, 255);
-    color: #b88917;
+    color: (0,191,99); ;
     width: 150px;
     font-size: 16px;
     font-weight: medium;
@@ -52,6 +52,7 @@
 .btn:hover {
     cursor: pointer;
     opacity: 1;
-    background-color: rgb(230, 230, 230);
+    color: white;
+    background-color: rgb(0,191,99); 
     
 }

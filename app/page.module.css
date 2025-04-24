@@ -32,8 +32,6 @@
   z-index: 1; 
 }
 
-
-
 .h2 {
   z-index: 3;
   width: 100%;
@@ -43,7 +41,7 @@
   font-weight: lighter;
   font-size: 24px;
   color: white;
-  background-color: #b88917;
+  background-color: rgb(82,113,255);
 }
 
 
