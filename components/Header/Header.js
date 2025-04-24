@@ -30,8 +30,8 @@ export default function Header() {
           className={styles.logo}
           src="/logo.png"
           alt="Vue du château-hôtel"
-          width={150}
-          height={300}
+          width={180}
+          height={200}
           sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </Link>   
