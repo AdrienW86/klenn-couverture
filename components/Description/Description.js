@@ -37,7 +37,7 @@ export default function Description() {
             width={400}
             height={400}
             sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className={styles.image2}
+            className={styles.image}
           />
           <div className={styles.intro}>
             <motion.p
@@ -101,12 +101,12 @@ export default function Description() {
             <li className={styles.li}>
             <motion.img
                 ref={ref9}  
-                initial={{ opacity: 0, x: 100 }} 
+                initial={{ opacity: 0, x: -100 }} 
                 animate={{
                   opacity: inView9 ? 1 : 0,
                   x: inView9 ? 0 : 100,
                 }}
-                exit={{ opacity: 0, x: 100 }}
+                exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
                 src="/image10.jpg"
                 alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
@@ -117,16 +117,17 @@ export default function Description() {
               />
               <motion.p
                 ref={ref8}  
-                initial={{ opacity: 0, x: -100 }} 
+                initial={{ opacity: 0, x: 100 }} 
                 animate={{
                   opacity: inView8 ? 1 : 0,
                   x: inView8 ? 0 : -100,
                 }}
-                exit={{ opacity: 0, x: -100 }}
+                exit={{ opacity: 0, x: 100 }}
                 transition={{ duration: 0.5 }}
                 className={styles.p}
               > 
                 <span className={styles.span}>Peinture intérieure et extérieure haut de gamme</span>Nos finitions sont réalisées avec des peintures professionnelles adaptées à chaque support. Préparation minutieuse des surfaces, application soignée, rendu impeccable.
+                avec des produits locaux et une cuisine généreuse.
               </motion.p>
              
             </li>
@@ -164,12 +165,12 @@ export default function Description() {
             <li className={styles.li}>
               <motion.img
                 ref={ref13} 
-                initial={{ opacity: 0, x: 100 }} 
+                initial={{ opacity: 0, x: -100 }} 
                 animate={{
                   opacity: inView13 ? 1 : 0,
                   x: inView13 ? 0 : 100,
                 }}
-                exit={{ opacity: 0, x: 100 }}
+                exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
                 src="/image1.jpg"
                 alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
@@ -180,10 +181,10 @@ export default function Description() {
               />
                <motion.p
                 ref={ref12}  
-                initial={{ opacity: 0, x: -100 }} 
+                initial={{ opacity: 0, x: 100 }} 
                 animate={{
                   opacity: inView12 ? 1 : 0,
-                  x: inView12 ? 0 : -100,
+                  x: inView12 ? 0 : 100,
                 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
@@ -193,7 +194,6 @@ export default function Description() {
               </motion.p>
             </li>
           </ul>
-
         </div>
        </section>
       </section>
