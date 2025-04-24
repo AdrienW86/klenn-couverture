@@ -30,7 +30,7 @@ export async function POST(req) {
 		const sendGridMail = {
 			to: process.env.EMAIL_CLIENT,
 			from: process.env.EMAIL_MASTER,
-			subject: `Château de Projan - ${subject}`,
+			subject: `Elite Couverture - ${subject}`,
 			text: `${name} vous a contacté.\n\nVoici son message :\n\n${message}`,
 			html: `<p>${name} vous a contacté.</p><p>Voici son message :</p><p>${message}</p>`,
 		};		
