@@ -7,7 +7,7 @@
     position: relative;
     bottom: 10px;
     text-decoration: underline;
-    font-size: 1em;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(0,191,99);  
 }
@@ -30,21 +30,28 @@
 }
 
 .image {
+    width: 300px;
+    height: 300px;
+}
+
+.image2 {
     width: 100%;
     height: auto;
-  }
+}
 
 .article, .intro {
     padding: 12px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     font-weight: lighter;
-    font-size: 18px; 
+    font-size: 16px; 
     font-weight: bold;
 }
 
 .intro {
     display: flex;
+    text-align: center;
+    line-height: 1.7em;
     flex-direction: column;
     justify-content: center; 
 }
@@ -60,29 +67,32 @@
     font-weight: lighter;
 }
 
-
-
 .li {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 80px 0;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 16px;
     position: relative;
 }
 
 .picture {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    margin: auto;
     border-radius: 20px;
-    border: 1px solid #b88917;
+    border: 1px solid #ffffff;
 }
 
 .p {
-    margin-top: 30px;
-    width: 100%;
-    height: auto;
-    padding: 16px;
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgb(0,191,99);
+    line-height: 1.7em;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -108,13 +118,19 @@
   /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
     .picture {
-        width: 50%;
-        height: 300px;
+        width: 650px;
+        height: 650px;
         border-radius: 20px;
         border: 1px solid rgb(0,191,99);;
     }
     .p {
+        width: 650px;
+        height: 650px;
         font-size: 1.5em;
+    }
+    .span {
+        font-size: 1.7em;
+        line-height: 2em;
     }
 }
 

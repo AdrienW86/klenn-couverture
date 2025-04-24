@@ -40,10 +40,9 @@
     border-radius: 16px;
     border: 1px solid rgb(0,191,99);
     background-color: rgb(255, 255, 255);
-    color: (0,191,99); ;
-    width: 150px;
+    color: (0,191,99); 
+    width: 160px;
     font-size: 16px;
-    font-weight: medium;
     text-align: center;
     font-weight: bold;
     transition: .4s ease-in-out;

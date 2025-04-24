@@ -35,9 +35,9 @@ export default function Description() {
             src="/image1.jpg"
             alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
             width={400}
-            height={300}
+            height={400}
             sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className={styles.image}
+            className={styles.image2}
           />
           <div className={styles.intro}>
             <motion.p
@@ -79,8 +79,8 @@ export default function Description() {
                 transition={{ duration: 0.5 }}
                 src="/image5.jpg"
                 alt="photos d'une toiture en travaux"
-                width={200}
-                height={200}
+                width={300}
+                height={300}
                 sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className={styles.picture}
               />
@@ -127,7 +127,6 @@ export default function Description() {
                 className={styles.p}
               > 
                 <span className={styles.span}>Peinture intérieure et extérieure haut de gamme</span>Nos finitions sont réalisées avec des peintures professionnelles adaptées à chaque support. Préparation minutieuse des surfaces, application soignée, rendu impeccable.
-                avec des produits locaux et une cuisine généreuse.
               </motion.p>
              
             </li>
@@ -163,19 +162,6 @@ export default function Description() {
               </motion.p>
             </li>
             <li className={styles.li}>
-              <motion.p
-                ref={ref12}  
-                initial={{ opacity: 0, x: -100 }} 
-                animate={{
-                  opacity: inView12 ? 1 : 0,
-                  x: inView12 ? 0 : -100,
-                }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className={styles.p}
-              >
-                <span className={styles.span}> Matériel professionnel et techniques éprouvées</span>Nous utilisons des équipements de pointe et des méthodes éprouvées pour un chantier sécurisé, efficace et parfaitement exécuté, quelles que soient les conditions.
-              </motion.p>
               <motion.img
                 ref={ref13} 
                 initial={{ opacity: 0, x: 100 }} 
@@ -192,6 +178,19 @@ export default function Description() {
                 sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className={styles.picture}
               />
+               <motion.p
+                ref={ref12}  
+                initial={{ opacity: 0, x: -100 }} 
+                animate={{
+                  opacity: inView12 ? 1 : 0,
+                  x: inView12 ? 0 : -100,
+                }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className={styles.p}
+              >
+                <span className={styles.span}> Matériel professionnel et techniques éprouvées</span>Nous utilisons des équipements de pointe et des méthodes éprouvées pour un chantier sécurisé, efficace et parfaitement exécuté, quelles que soient les conditions.
+              </motion.p>
             </li>
           </ul>
 

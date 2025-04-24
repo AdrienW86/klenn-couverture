@@ -9,6 +9,7 @@
   
 .column {
   display: flex;
+  text-align: center;
   flex-direction: column;
   gap: 20px;
   padding: 16px;
