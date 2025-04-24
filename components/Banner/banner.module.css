@@ -35,7 +35,7 @@
     justify-content: space-evenly;
   }
 
-.btn {
+.btn, .btn2 {
     padding: 8px;
     border-radius: 16px;
     border: 1px solid rgb(0,191,99);
@@ -48,10 +48,23 @@
     transition: .4s ease-in-out;
 }
 
+.btn2 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0,191,99); 
+}
+
 .btn:hover {
     cursor: pointer;
     opacity: 1;
     color: white;
     background-color: rgb(0,191,99); 
+    
+}
+
+.btn2:hover {
+    cursor: pointer;
+    opacity: 1;
+    color: white;
+    background-color: rgb(1, 163, 85); 
     
 }

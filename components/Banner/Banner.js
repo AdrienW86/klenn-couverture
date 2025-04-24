@@ -51,7 +51,7 @@ export default function Carousel() {
               Devis gratuit
             </motion.a>
             <motion.a 
-              className={styles.btn} 
+              className={styles.btn2} 
               href="/pictures"
               ref={ref2}  
               initial={{ opacity: 0, x: 50 }} 
