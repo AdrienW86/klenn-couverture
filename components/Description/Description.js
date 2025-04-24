@@ -50,7 +50,8 @@ export default function Description() {
               exit={{ opacity: 0, y: 50 }}  
               transition={{ duration: 0.5 }}
             > 
-              Nichée au cœur de la Gascogne, entre collines verdoyantes et paysages vallonnés, le Château de Projan vous ouvre ses portes pour une escapade hors du temps...
+             Basée dans les Pyrénées-Orientales (66), Elite Couverture intervient dans tout le département : Perpignan, Canet-en-Roussillon, Argelès-sur-Mer, Céret, Prades et alentours.
+             Nous nous déplaçons rapidement pour vos travaux de couverture, peinture et maçonnerie, que ce soit en ville, en bord de mer ou en zone rurale.
             </motion.p>
           </div>
         </motion.section>
@@ -94,7 +95,7 @@ export default function Description() {
                 transition={{ duration: 0.5 }}
                 className={styles.p}
               >
-                <span className={styles.span}>Un cadre enchanteur</span>Profitez d’un parc majestueux où il fait bon se promener, lire ou simplement se ressourcer.
+                <span className={styles.span}> Expertise en couverture traditionnelle et moderne</span>Nous réalisons tous types de toitures (tuiles, bac acier, zinguerie…) avec une parfaite maîtrise des normes en vigueur, assurant l’étanchéité et la durabilité de votre couverture.
               </motion.p>
             </li>
             <li className={styles.li}>
@@ -109,7 +110,7 @@ export default function Description() {
                 transition={{ duration: 0.5 }}
                 className={styles.p}
               > 
-                <span className={styles.span}>Une gastronomie régionale</span>Découvrez les saveurs authentiques de la Gascogne 
+                <span className={styles.span}>Peinture intérieure et extérieure haut de gamme</span>Nos finitions sont réalisées avec des peintures professionnelles adaptées à chaque support. Préparation minutieuse des surfaces, application soignée, rendu impeccable.
                 avec des produits locaux et une cuisine généreuse.
               </motion.p>
               <motion.img
@@ -157,7 +158,7 @@ export default function Description() {
                 transition={{ duration: 0.5 }}
                 className={styles.p}
               >
-                <span className={styles.span}>Des activités variées</span>Balades à vélo, visites de vignobles, découverte des villages pittoresques et des marchés traditionnels de la région.
+                <span className={styles.span}> Maçonnerie solide et sur-mesure</span>De la rénovation de façades aux murets et dallages, nous garantissons des ouvrages robustes, durables et esthétiques, dans le respect des règles de l’art.
               </motion.p>
             </li>
             <li className={styles.li}>
@@ -172,7 +173,7 @@ export default function Description() {
                 transition={{ duration: 0.5 }}
                 className={styles.p}
               >
-                <span className={styles.span}>Bien-être et détente</span>Laissez-vous tenter par un moment de relaxation sur la terrasse ensoleillée ou près de la piscine, dans une atmosphère paisible.
+                <span className={styles.span}> Matériel professionnel et techniques éprouvées</span>Nous utilisons des équipements de pointe et des méthodes éprouvées pour un chantier sécurisé, efficace et parfaitement exécuté, quelles que soient les conditions.
               </motion.p>
               <motion.img
                 ref={ref13} 
@@ -193,10 +194,6 @@ export default function Description() {
             </li>
           </ul>
 
-          <p>
-            Venez découvrir le charme et l’authenticité du Château de Projan, un lieu où passé et présent s’entrelacent pour vous offrir une expérience unique.
-            <a href="/contact" className={styles.ctaButton}>Réservez dès aujourd’hui</a> pour vivre un moment d'exception dans un cadre enchanteur.
-          </p>
         </div>
        </section>
       </section>
