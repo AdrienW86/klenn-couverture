@@ -10,14 +10,13 @@ export default function Footer() {
     <footer className={styles.footer}>
        <div className={styles.container}>
         <Image
-            src="/favicon.png"
+            src="/logo2.png"
             alt="Vue du château-hôtel"
-            width={80}
-            height={60}
+            width={200}
+            height={200}
             sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
        </div>
-      <h3 className={styles.h3}> Elite Couverture </h3>
       <a className={styles.link} href="https://code-v.fr" target="_blank" rel="noopener noreferrer">
         Réalisé par <span className={styles.codev}> Codev </span>
       </a>
