@@ -127,7 +127,6 @@ export default function Description() {
                 className={styles.p}
               > 
                 <span className={styles.span}>Peinture intérieure et extérieure haut de gamme</span>Nos finitions sont réalisées avec des peintures professionnelles adaptées à chaque support. Préparation minutieuse des surfaces, application soignée, rendu impeccable.
-                avec des produits locaux et une cuisine généreuse.
               </motion.p>
              
             </li>

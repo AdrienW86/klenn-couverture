@@ -30,11 +30,6 @@
 }
 
 .image {
-    width: 300px;
-    height: 300px;
-}
-
-.image2 {
     width: 100%;
     height: auto;
 }
@@ -52,6 +47,7 @@
     display: flex;
     text-align: center;
     line-height: 1.7em;
+    overflow: hidden;
     flex-direction: column;
     justify-content: center; 
 }
@@ -136,12 +132,18 @@
 
 @media (min-width: 1121px) {
     .picture {
-        width: 50%;
-        height: 400px;
+        width: 800px;
+        height: 800px;
         border-radius: 20px;
         border: 1px solid rgb(0,191,99);;
     }
     .p {
+        width: 800px;
+        height: 800px;
         font-size: 2em;
+    }
+    .span {
+        font-size: 1.7em;
+        line-height: 2em;
     }
 }
