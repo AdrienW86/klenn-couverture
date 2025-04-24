@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
        <head>
-        <link rel="icon" href="favicon2.png" />
+        <link rel="icon" href="favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
           rel="stylesheet"
