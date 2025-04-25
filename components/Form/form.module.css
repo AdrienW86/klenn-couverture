@@ -15,7 +15,6 @@
     font-size: 1.2em;
     font-weight: bold;
     color: rgb(82,113,255);  
-    font-family: 'Lobster', sans-serif;
 }
 
 .formContent {
@@ -34,10 +33,6 @@
     width: 90%;
     margin: 0 auto 15px auto;
     padding-left: 20px;
-}
-
-.input::placeholder, .textarea::placeholder {
-    font-family: 'Lobster', sans-serif;
 }
 
 .textarea {
@@ -61,13 +56,12 @@
     border-radius: 22px;
     border: none;
     color: white;
-    background-color:rgb(0,191,99);;
+    background-color:rgb(0,191,99);
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 0 70px;
     font-size: 1.2em;
-    font-family: 'Lobster', sans-serif;
     transition: .4s ease-in-out;
     
 }
@@ -88,7 +82,6 @@
     border-radius: 8px;
     font-size: 1.2rem;
     line-height: 2.2;
-    background: #b88917;
+    background-color:rgb(0,191,99);
     border: 2px solid white;
-    font-family: 'Lobster', sans-serif;
 }
