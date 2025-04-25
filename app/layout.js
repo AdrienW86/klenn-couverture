@@ -12,6 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
        <head>
+       
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SD7E6L1ZYY">
+</script>
+<script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SD7E6L1ZYY');
+</script>
         <link rel="icon" href="favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
