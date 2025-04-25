@@ -1,6 +1,6 @@
 import Header from '@/components/Header/Header'
 import SimpleBanner from '@/components/SimpleBanner/SimpleBanner'
-import Menu from '@/components/Menu/Menu'
+import PeintureMenu from '@/components/PeintureMenu/Menu'
 import Footer from '@/components/Footer/Footer'
 
 export default function page() {
@@ -8,7 +8,7 @@ export default function page() {
     <main>
       <Header />
       <SimpleBanner />
-      <Menu />
+      <PeintureMenu />
       <Footer />     
     </main>
   )
