@@ -1,0 +1,35 @@
+.container {
+    color: black;
+    background-color: aliceblue;
+}
+
+.title {
+    color: white;
+    padding: 12px;
+    text-align: center;
+    background-color: rgb(82,113,255); 
+}
+
+.h2 {
+    padding: 12px;
+    text-decoration: underline;
+    color : rgb(6,192,102)
+}
+
+.p {
+    font-weight: bold;
+    padding: 12px;
+}
+
+.ul {
+    padding: 12px;
+    font-weight: bold;
+    list-style: none;
+}
+
+.li {
+    font-weight: bold;
+    color: rgb(82,113,255);
+    padding: 8px;
+    margin-left: 6px;
+}
