@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -35,6 +36,14 @@ export default function Carousel() {
 
   return (
     <div className={styles.carousel} id="carouselExampleFade">
+      <Image          
+            src="/garantie.png"
+            alt="garantie decenale"
+            width={140}
+            height={140}
+            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className={styles.image}
+          />
         <div className={styles.btnContainer}>
             <motion.a 
               className={styles.btn} 
