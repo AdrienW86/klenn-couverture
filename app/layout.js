@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-SD7E6L1ZYY');
+            gtag('config', 'AW-17050234458');
           `}
         </Script>
         {children}
