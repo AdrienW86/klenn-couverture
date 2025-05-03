@@ -4,27 +4,40 @@ import styles from './about.module.css'
 export default function About() {
   return (
     <section className={styles.container}>
-        <h1 className={styles.title}> Qui sommes-nous ? </h1>
-            <p className={styles.p}> Elite Couverture, c’est avant tout une équipe de professionnels passionnés par leur métier, 
-                au service de vos projets de construction et de rénovation. Basée sur des valeurs solides comme la rigueur, 
-                la transparence et la qualité du travail bien fait, notre entreprise s’est imposée comme un acteur de confiance 
-                dans les domaines de la couverture, de la peinture intérieure et extérieure, et de la maçonnerie. 
-            </p>
-        <h2 className={styles.h2}> Une entreprise à taille humaine, proche de ses clients </h2>
-            <p className={styles.p}> Chez Elite Couverture, chaque client compte. Nous croyons en la force d’un accompagnement personnalisé, 
-                à l’écoute de vos besoins réels. Que vous soyez un particulier ou un professionnel, nous mettons tout en 
-                œuvre pour vous proposer des solutions sur mesure, durables et esthétiques.
-            </p>
-        <h2 className={styles.h2}> Des artisans qualifiés, un savoir-faire reconnu </h2>
-            <p className={styles.p}> Notre équipe est composée d’artisans qualifiés, expérimentés et régulièrement formés aux nouvelles techniques et normes du bâtiment. 
-                Nous travaillons avec des matériaux de qualité, sélectionnés pour leur fiabilité et leur longévité.
-            </p>
-        <h2 className={styles.h2}> Une exigence de qualité à chaque étape </h2>
-        <p className={styles.p}>  De la première prise de contact à la réception finale des travaux, nous accordons une importance particulière au respect des délais, 
-            à la propreté du chantier, et à la satisfaction totale de nos clients. Chaque intervention est couverte par notre garantie décennale, 
-            gage de notre engagement et de notre sérieux.
-        </p>
-        <p className={styles.p}>Elite Couverture, c’est plus qu’une entreprise : c’est un partenaire de confiance pour donner vie à vos projets, en toute sérénité.</p>
+      <h1 className={styles.title}>Qui sommes-nous ?</h1>
+      <p className={styles.p}>
+        Klenn Couverture, c’est avant tout une équipe de professionnels passionnés par leur métier,
+        au service de vos projets de construction et de rénovation dans toute la Loire-Atlantique.
+        Fondée sur des valeurs solides comme la rigueur, la transparence et le travail bien fait,
+        notre entreprise s’est imposée comme un acteur de confiance dans les domaines de la couverture,
+        de la peinture intérieure et extérieure, et de la petite maçonnerie.
+      </p>
+
+      <h2 className={styles.h2}>Une entreprise de proximité, à taille humaine</h2>
+      <p className={styles.p}>
+        Chez Klenn Couverture, chaque projet est unique. Nous croyons à l'importance d'un accompagnement personnalisé,
+        en étant à l’écoute de vos besoins spécifiques. Que vous soyez un particulier ou un professionnel,
+        nous vous proposons des solutions durables, esthétiques et adaptées à votre budget.
+      </p>
+
+      <h2 className={styles.h2}>Des artisans qualifiés, un savoir-faire local</h2>
+      <p className={styles.p}>
+        Notre équipe est composée d’artisans expérimentés et régulièrement formés aux nouvelles techniques
+        et aux normes du bâtiment. Nous sélectionnons des matériaux fiables et durables,
+        pour vous garantir des résultats à la hauteur de vos attentes.
+      </p>
+
+      <h2 className={styles.h2}>La qualité avant tout</h2>
+      <p className={styles.p}>
+        De la première prise de contact à la réception des travaux, nous nous engageons à respecter les délais,
+        à maintenir un chantier propre et à assurer votre satisfaction. Toutes nos interventions sont couvertes
+        par une garantie décennale, preuve de notre engagement et de notre sérieux.
+      </p>
+
+      <p className={styles.p}>
+        Klenn Couverture, c’est votre partenaire de confiance pour tous vos projets de rénovation
+        et d’amélioration de l’habitat en Loire-Atlantique.
+      </p>
     </section>
   )
 }

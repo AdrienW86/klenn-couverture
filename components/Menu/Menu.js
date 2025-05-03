@@ -4,8 +4,8 @@ import styles from './menu.module.css'
 export default function Menu() {
   return (
     <section className={styles.container}>
-        <h1 className={styles.title}> Le déroulement d’une couverture de toit avec Elite Couverture </h1>
-            <p className={styles.p}> Chez Elite Couverture, nous mettons notre expertise au service de 
+        <h1 className={styles.title}> Le déroulement d’une couverture de toit avec Klenn Couverture </h1>
+            <p className={styles.p}> Chez Klenn Couverture, nous mettons notre expertise au service de 
                 vos projets de toiture, qu’il s’agisse d’une construction neuve ou 
                 d’une rénovation. Chaque chantier est réalisé avec rigueur, transparence 
                 et un souci constant de la qualité. Voici comment se déroule une couverture 
@@ -41,7 +41,7 @@ export default function Menu() {
                 Une dernière vérification est réalisée en votre présence pour valider la qualité 
                 des travaux et vous remettre la garantie décennale.
             </p>
-            <p className={styles.p}>Elite Couverture, c’est le choix d’un travail soigné, durable et conforme aux normes. 
+            <p className={styles.p}>Klenn Couverture, c’est le choix d’un travail soigné, durable et conforme aux normes. 
                 Contactez-nous dès aujourd’hui pour une toiture solide, esthétique et parfaitement étanche. 
             </p>
     </section>

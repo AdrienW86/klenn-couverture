@@ -1,4 +1,4 @@
-'use client'; // pour un projet Next.js avec hooks React
+'use client';
 
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -7,33 +7,54 @@ import Image from 'next/image';
 import styles from './description.module.css';
 
 export default function Description() {
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref4, inView: inView4 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref5, inView: inView5 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref6, inView: inView6 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref7, inView: inView7 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref8, inView: inView8 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref9, inView: inView9 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref10, inView: inView10 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref11, inView: inView11 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref12, inView: inView12 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref13, inView: inView13 } = useInView({ triggerOnce: false, threshold: 0.0 });
+  const refs = Array.from({ length: 13 }, () => useInView({ triggerOnce: false, threshold: 0.0 }));
+
+  const services = [
+    {
+      img: '/image5.jpg',
+      alt: 'toiture en travaux',
+      p: 'Travaux de couverture à Nantes et ses environs',
+      text: 'Nous intervenons sur tous types de toitures (tuiles, ardoises, bac acier, zinc...) dans toute la Loire-Atlantique, en respectant les normes pour une étanchéité optimale et une longévité maximale.',
+      imgRef: 5,
+      pRef: 6,
+    },
+    {
+      img: '/image10.jpg',
+      alt: 'chantier de peinture extérieure',
+      p: 'Peinture soignée pour intérieur et extérieur',
+      text: 'Nos prestations de peinture sont réalisées avec des produits professionnels, adaptés aux conditions climatiques de la région. Finitions nettes, durables et esthétiques.',
+      imgRef: 8,
+      pRef: 7,
+    },
+    {
+      img: '/image9.jpg',
+      alt: 'maçonnerie',
+      p: 'Maçonnerie de qualité pour tous vos projets',
+      text: 'Que ce soit pour un mur, un muret, une terrasse ou la rénovation d’une façade, notre savoir-faire garantit des ouvrages solides et durables dans le respect des règles de l’art.',
+      imgRef: 9,
+      pRef: 10,
+    },
+    {
+      img: '/image1.jpg',
+      alt: 'matériel professionnel',
+      p: 'Matériel adapté et méthodes efficaces',
+      text: 'Nous utilisons du matériel professionnel et des techniques éprouvées pour assurer des chantiers sécurisés, rapides et parfaitement réalisés.',
+      imgRef: 12,
+      pRef: 11,
+    },
+  ];
 
   return (
     <AnimatePresence>
       <section className={styles.description}>
         <div className={styles.box}>
-          <h2 className={styles.h2}>
-            Zone d'intervention
-          </h2>
+          <h2 className={styles.h2}>Zone d'intervention</h2>
         </div>
 
         <motion.section className={styles.localisation}>
-          <Image          
+          <Image
             src="/image1.jpg"
-            alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
+            alt="artisan en toiture"
             width={400}
             height={400}
             sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -41,160 +62,57 @@ export default function Description() {
           />
           <div className={styles.intro}>
             <motion.p
-              ref={ref4}
-              initial={{ opacity: 0, y: 50 }} 
-              animate={{
-                opacity: inView4 ? 1 : 0,
-                y: inView4 ? 0 : 50,
-              }}
-              exit={{ opacity: 0, y: 50 }}  
+              ref={refs[3].ref}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: refs[3].inView ? 1 : 0, y: refs[3].inView ? 0 : 50 }}
+              exit={{ opacity: 0, y: 50 }}
               transition={{ duration: 0.5 }}
-            > 
-             Basée dans les Pyrénées-Orientales (66), Elite Couverture intervient dans tout le département : Perpignan, Canet-en-Roussillon, Argelès-sur-Mer, Céret, Prades et alentours.
-             Nous nous déplaçons rapidement pour vos travaux de couverture, peinture et maçonnerie, que ce soit en ville, en bord de mer ou en zone rurale.
+            >
+              Basée en Loire-Atlantique (44), notre entreprise intervient dans tout le département :
+              Nantes, Saint-Nazaire, Rezé, Saint-Herblain, Pornic, Châteaubriant, et les communes avoisinantes.
+              Nous nous déplaçons rapidement pour vos travaux de couverture, peinture et maçonnerie.
             </motion.p>
           </div>
         </motion.section>
 
         <div className={styles.box}>
-          <h2
-            className={styles.h2}
-          >
-            Pourquoi choisir Elite Couverture ?
-          </h2>
+          <h2 className={styles.h2}>Pourquoi nous faire confiance ?</h2>
         </div>
 
-       <section className={styles.background}>
-       <div className={styles.article} >
-          <ul>
-            <li className={styles.li}>
-              <motion.img
-                ref={ref6}  
-                initial={{ opacity: 0, x: -100 }} 
-                animate={{
-                  opacity: inView6 ? 1 : 0,
-                  x: inView6 ? 0 : -100,
-                }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                src="/image5.jpg"
-                alt="photos d'une toiture en travaux"
-                width={300}
-                height={300}
-                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className={styles.picture}
-              />
-              <motion.p
-                ref={ref7}  
-                initial={{ opacity: 0, x: 100 }} 
-                animate={{
-                  opacity: inView7 ? 1 : 0,
-                  x: inView7 ? 0 : 100,
-                }}
-                exit={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.5 }}
-                className={styles.p}
-              >
-                <span className={styles.span}> Expertise en couverture traditionnelle et moderne</span>Nous réalisons tous types de toitures (tuiles, bac acier, zinguerie…) avec une parfaite maîtrise des normes en vigueur, assurant l’étanchéité et la durabilité de votre couverture.
-              </motion.p>
-            </li>
-            <li className={styles.li}>
-            <motion.img
-                ref={ref9}  
-                initial={{ opacity: 0, x: -100 }} 
-                animate={{
-                  opacity: inView9 ? 1 : 0,
-                  x: inView9 ? 0 : 100,
-                }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                src="/image10.jpg"
-                alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
-                width={200}
-                height={200}
-                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className={styles.picture}
-              />
-              <motion.p
-                ref={ref8}  
-                initial={{ opacity: 0, x: 100 }} 
-                animate={{
-                  opacity: inView8 ? 1 : 0,
-                  x: inView8 ? 0 : -100,
-                }}
-                exit={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.5 }}
-                className={styles.p}
-              > 
-                <span className={styles.span}>Peinture intérieure et extérieure haut de gamme</span>Nos finitions sont réalisées avec des peintures professionnelles adaptées à chaque support. Préparation minutieuse des surfaces, application soignée, rendu impeccable.
-              </motion.p>
-             
-            </li>
-            <li className={styles.li}>
-              <motion.img
-                ref={ref10}  
-                initial={{ opacity: 0, x: -100 }} 
-                animate={{
-                  opacity: inView10 ? 1 : 0,
-                  x: inView10 ? 0 : -100,
-                }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                src="/image9.jpg"
-                alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
-                width={200}
-                height={200}
-                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className={styles.picture}
-              />
-              <motion.p
-                ref={ref11}  
-                initial={{ opacity: 0, x: 100 }} 
-                animate={{
-                  opacity: inView11 ? 1 : 0,
-                  x: inView11 ? 0 : 100,
-                }}
-                exit={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.5 }}
-                className={styles.p}
-              >
-                <span className={styles.span}> Maçonnerie solide et sur-mesure</span>De la rénovation de façades aux murets et dallages, nous garantissons des ouvrages robustes, durables et esthétiques, dans le respect des règles de l’art.
-              </motion.p>
-            </li>
-            <li className={styles.li}>
-              <motion.img
-                ref={ref13} 
-                initial={{ opacity: 0, x: -100 }} 
-                animate={{
-                  opacity: inView13 ? 1 : 0,
-                  x: inView13 ? 0 : 100,
-                }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                src="/image1.jpg"
-                alt="Vue pittoresque et charmante du Château de Projan entouré de collines"
-                width={300}
-                height={300}
-                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                className={styles.picture}
-              />
-               <motion.p
-                ref={ref12}  
-                initial={{ opacity: 0, x: 100 }} 
-                animate={{
-                  opacity: inView12 ? 1 : 0,
-                  x: inView12 ? 0 : 100,
-                }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className={styles.p}
-              >
-                <span className={styles.span}> Matériel professionnel et techniques éprouvées</span>Nous utilisons des équipements de pointe et des méthodes éprouvées pour un chantier sécurisé, efficace et parfaitement exécuté, quelles que soient les conditions.
-              </motion.p>
-            </li>
-          </ul>
-        </div>
-       </section>
+        <section className={styles.background}>
+          <div className={styles.article}>
+            <ul>
+              {services.map((item, index) => (
+                <li key={index} className={styles.li}>
+                  <motion.img
+                    ref={refs[item.imgRef].ref}
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: refs[item.imgRef].inView ? 1 : 0, x: refs[item.imgRef].inView ? 0 : -100 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                    src={item.img}
+                    alt={item.alt}
+                    width={300}
+                    height={300}
+                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className={styles.picture}
+                  />
+                  <motion.p
+                    ref={refs[item.pRef].ref}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: refs[item.pRef].inView ? 1 : 0, x: refs[item.pRef].inView ? 0 : 100 }}
+                    exit={{ opacity: 0, x: 100 }}
+                    transition={{ duration: 0.5 }}
+                    className={styles.p}
+                  >
+                    <span className={styles.span}>{item.p}</span>
+                    {item.text}
+                  </motion.p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
       </section>
     </AnimatePresence>
   );

@@ -4,8 +4,8 @@ import styles from './menu.module.css'
 export default function Menu() {
   return (
     <section className={styles.container}>
-        <h1 className={styles.title}> Le déroulement d’un chantier de peinture intérieure et extérieure avec Elite Couverture </h1>
-            <p className={styles.p}> Chez Elite Couverture, notre savoir-faire ne se limite pas à la toiture. Nous vous accompagnons 
+        <h1 className={styles.title}> Le déroulement d’un chantier de peinture intérieure et extérieure avec Klenn Couverture </h1>
+            <p className={styles.p}> Chez Klenn Couverture, notre savoir-faire ne se limite pas à la toiture. Nous vous accompagnons 
                 également dans vos projets de peinture intérieure et extérieure, que ce soit pour sublimer votre habitat ou rénover 
                 une façade. Chaque intervention est réalisée avec soin, méthode et professionnalisme. Voici comment se déroule un chantier 
                 de peinture avec notre équipe.

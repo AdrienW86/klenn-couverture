@@ -1,16 +1,16 @@
-import React from 'react'
-import Image from 'next/image'
-import styles from "./equipment.module.css"
+import React from 'react';
+import styles from "./equipment.module.css";
 
 export default function Equipment() {
   return (
     <section className={styles.container}>
       <div className={styles.column}>
-        Implantée au cœur des Pyrénées-Orientales, Elite Couverture met à votre service son savoir-faire local et son professionnalisme pour tous vos travaux de couverture, peinture et maçonnerie.
-        Que ce soit pour rénover une toiture, rafraîchir vos façades ou réaliser des travaux de gros œuvre, notre équipe intervient avec rigueur, réactivité et matériaux de qualité.
-        Faites confiance à un artisan engagé, à l’écoute de vos besoins, pour donner vie à vos projets en toute sérénité.
-        Devis gratuit et intervention rapide dans tout le 66 !
+        Basée en Loire-Atlantique, notre entreprise vous accompagne pour tous vos travaux de couverture, peinture et maçonnerie dans le 44.
+        Que ce soit pour rénover votre toiture à Nantes, repeindre vos façades à Saint-Nazaire ou effectuer des travaux de gros œuvre à Rezé,
+        nous intervenons avec professionnalisme, réactivité et des matériaux de qualité.
+        Faites appel à une équipe d’artisans expérimentés, à l’écoute de vos besoins, pour concrétiser vos projets en toute confiance.
+        Devis gratuit et intervention rapide dans tout le département de la Loire-Atlantique !
       </div>
     </section>
-  )
+  );
 }

@@ -11,7 +11,7 @@ export default function Footer() {
        <div className={styles.container}>
         <Image
             src="/logo2.png"
-            alt="Vue du château-hôtel"
+            alt="logo"
             width={200}
             height={200}
             sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"

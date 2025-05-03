@@ -5,9 +5,9 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Elite couverture',
+  title: 'Klenn Couverture',
   description:
-    "Elite Couverture – Spécialiste en couverture et peinture dans le 66. Interventions rapides et travaux de qualité dans tout le département des Pyrénées-Orientales. Toitures, façades, intérieurs : votre expert local.",
+    "Klenn Couverture – Spécialiste en couverture et peinture dans le 44. Interventions rapides et travaux de qualité dans toute la Loire-Atlantique. Toitures, façades, intérieurs : votre expert local à votre service.",
 }
 
 export default function RootLayout({ children }) {
@@ -34,10 +34,8 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-SD7E6L1ZYY');
           `}
         </Script>
-
         {children}
       </body>
     </html>
   )
 }
-
