@@ -19,7 +19,7 @@ export default function Description() {
       pRef: 6,
     },
     {
-      img: '/image10.jpg',
+      img: '/image20.jpg',
       alt: 'chantier de peinture extérieure',
       p: 'Peinture soignée pour intérieur et extérieur',
       text: 'Nos prestations de peinture sont réalisées avec des produits professionnels, adaptés aux conditions climatiques de la région. Finitions nettes, durables et esthétiques.',
@@ -27,7 +27,7 @@ export default function Description() {
       pRef: 7,
     },
     {
-      img: '/image9.jpg',
+      img: '/image18.jpg',
       alt: 'maçonnerie',
       p: 'Maçonnerie de qualité pour tous vos projets',
       text: 'Que ce soit pour un mur, un muret, une terrasse ou la rénovation d’une façade, notre savoir-faire garantit des ouvrages solides et durables dans le respect des règles de l’art.',
@@ -35,7 +35,7 @@ export default function Description() {
       pRef: 10,
     },
     {
-      img: '/image1.jpg',
+      img: '/image13.jpg',
       alt: 'matériel professionnel',
       p: 'Matériel adapté et méthodes efficaces',
       text: 'Nous utilisons du matériel professionnel et des techniques éprouvées pour assurer des chantiers sécurisés, rapides et parfaitement réalisés.',
