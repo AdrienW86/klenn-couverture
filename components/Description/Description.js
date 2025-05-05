@@ -50,7 +50,6 @@ export default function Description() {
         <div className={styles.box}>
           <h2 className={styles.h2}>Zone d'intervention</h2>
         </div>
-
         <motion.section className={styles.localisation}>
           <Image
             src="/image1.jpg"
@@ -78,7 +77,6 @@ export default function Description() {
         <div className={styles.box}>
           <h2 className={styles.h2}>Pourquoi nous faire confiance ?</h2>
         </div>
-
         <section className={styles.background}>
           <div className={styles.article}>
             <ul>
