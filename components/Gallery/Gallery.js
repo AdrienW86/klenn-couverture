@@ -5,16 +5,26 @@ import styles from './gallery.module.css';
 
 export default function Gallery() {
   const images = [
-    { src: '/image1.jpg', alt: 'Image 1' },
-    { src: '/image2.jpg', alt: 'Image 2' },
-    { src: '/image3.jpg', alt: 'Image 3' },
-    { src: '/image4.jpg', alt: 'Image 4' },
-    { src: '/image5.jpg', alt: 'Image 5' },
-    { src: '/image6.jpg', alt: 'Image 1' },
-    { src: '/image7.jpg', alt: 'Image 2' },
-    { src: '/image8.jpg', alt: 'Image 3' },
-    { src: '/image9.jpg', alt: 'Image 4' },
-    { src: '/image10.jpg', alt: 'Image 5' },
+    { src: '/image1.jpg', alt: 'chantier' },
+    { src: '/image2.jpg', alt: 'chantier' },
+    { src: '/image3.jpg', alt: 'chantier' },
+    { src: '/image4.jpg', alt: 'chantier' },
+    { src: '/image5.jpg', alt: 'chantier' },
+    { src: '/image6.jpg', alt: 'chantier' },
+    { src: '/image7.jpg', alt: 'chantier' },
+    { src: '/image8.jpg', alt: 'chantier' },
+    { src: '/image9.jpg', alt: 'chantier' },
+    { src: '/image10.jpg', alt: 'chantier' },
+    { src: '/image11.jpg', alt: 'chantier' },
+    { src: '/image12.jpg', alt: 'chantier' },
+    { src: '/image13.jpg', alt: 'chantier' },
+    { src: '/image14.jpg', alt: 'chantier' },
+    { src: '/image15.jpg', alt: 'chantier' },
+    { src: '/image16.jpg', alt: 'chantier' },
+    { src: '/image17.jpg', alt: 'chantier' },
+    { src: '/image18.jpg', alt: 'chantier' },
+    { src: '/image19.jpg', alt: 'chantier' },
+    { src: '/image20.jpg', alt: 'chantier' },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
