@@ -11,7 +11,7 @@ export default function Description() {
 
   const services = [
     {
-      img: '/image5.jpg',
+      img: '/image5.avif',
       alt: 'toiture en travaux',
       p: 'Travaux de couverture à Nantes et ses environs',
       text: 'Nous intervenons sur tous types de toitures (tuiles, ardoises, bac acier, zinc...) dans toute la Loire-Atlantique, en respectant les normes pour une étanchéité optimale et une longévité maximale.',
@@ -19,7 +19,7 @@ export default function Description() {
       pRef: 6,
     },
     {
-      img: '/image20.jpg',
+      img: '/image20.avif',
       alt: 'chantier de peinture extérieure',
       p: 'Peinture soignée pour intérieur et extérieur',
       text: 'Nos prestations de peinture sont réalisées avec des produits professionnels, adaptés aux conditions climatiques de la région. Finitions nettes, durables et esthétiques.',
@@ -27,7 +27,7 @@ export default function Description() {
       pRef: 7,
     },
     {
-      img: '/image18.jpg',
+      img: '/image18.avif',
       alt: 'maçonnerie',
       p: 'Maçonnerie de qualité pour tous vos projets',
       text: 'Que ce soit pour un mur, un muret, une terrasse ou la rénovation d’une façade, notre savoir-faire garantit des ouvrages solides et durables dans le respect des règles de l’art.',
@@ -35,7 +35,7 @@ export default function Description() {
       pRef: 10,
     },
     {
-      img: '/image13.jpg',
+      img: '/image13.avif',
       alt: 'matériel professionnel',
       p: 'Matériel adapté et méthodes efficaces',
       text: 'Nous utilisons du matériel professionnel et des techniques éprouvées pour assurer des chantiers sécurisés, rapides et parfaitement réalisés.',
@@ -52,7 +52,7 @@ export default function Description() {
         </div>
         <motion.section className={styles.localisation}>
           <Image
-            src="/image1.jpg"
+            src="/image1.avif"
             alt="artisan en toiture"
             width={400}
             height={400}

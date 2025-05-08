@@ -29,7 +29,7 @@ export default function Header() {
           transition={{ duration: 0.5 }}
           className={styles.logo}
           src="/logo.png"
-          alt="Vue du château-hôtel"
+          alt="logo"
           width={180}
           height={200}
           sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"

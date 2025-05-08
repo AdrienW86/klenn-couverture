@@ -2,22 +2,21 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './banner.module.css';
 
 const images = [
-  '/image1.jpg',
-  '/image2.jpg',
-  '/image3.jpg', 
-  '/image4.jpg', 
-  '/image5.jpg',
-  '/image6.jpg',
-  '/image7.jpg',
-  '/image8.jpg',
-  '/image9.jpg',
-  '/image10.jpg',
+  '/image1.avif',
+  '/image2.avif',
+  '/image3.avif', 
+  '/image4.avif', 
+  '/image5.avif',
+  '/image6.avif',
+  '/image7.avif',
+  '/image8.avif',
+  '/image9.avif',
+  '/image10.avif',
 ];
 
 export default function Carousel() {
