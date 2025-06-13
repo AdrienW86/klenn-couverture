@@ -5,7 +5,7 @@ import styles from './map.module.css';
 
 export default function GoogleMap() {
   const address = {
-    name: "Elite Couverture",
+    name: "Klenn Couverture",
     email: "klenngurtner@gmail.com",
     phone: "06 98 14 42 22",
     fullAddress: "Loire-Atlantique",
