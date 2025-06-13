@@ -35,6 +35,26 @@
     justify-content: space-evenly;
   }
 
+.call {  
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    display: inline-block;
+    background-color: #28a745; 
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.call:hover {
+  background-color: #218838;
+}
+
 .btn, .btn2 {
     padding: 8px;
     border-radius: 16px;

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import Link from 'next/link';
 import styles from './banner.module.css';
 
 const images = [
@@ -72,7 +73,7 @@ export default function Carousel() {
             > 
               Nos réalisations 
             </motion.a>
-           
+       
         </div>
       <div className={styles.carouselInner}>
         {images.map((image, index) => (
@@ -87,7 +88,10 @@ export default function Carousel() {
             }}
           />
         ))}
-      </div>   
+      </div>  
+        <Link href="tel:0698144222" className={styles.call}>
+          📞 Appeler
+        </Link>
     </div>
   );
 }
