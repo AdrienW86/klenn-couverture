@@ -17,6 +17,10 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
+      <Link href="tel:0698144222" className={styles.call}>
+      📞 Appeler
+      </Link>
+
       <Link href="/">
         <motion.img
           ref={ref1}
