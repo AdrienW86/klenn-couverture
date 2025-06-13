@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.klenn-couverture.fr
+
+# Sitemaps
+Sitemap: https://www.klenn-couverture.fr/sitemap.xml

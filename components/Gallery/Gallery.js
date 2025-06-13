@@ -56,7 +56,6 @@ export default function Gallery() {
           </div>
         ))}
       </div>
-
       {/* Lightbox */}
       {isOpen && (
         <div className={styles.lightboxOverlay} onClick={closeLightbox}>
@@ -68,5 +67,3 @@ export default function Gallery() {
     </div>
   );
 }
-
-
