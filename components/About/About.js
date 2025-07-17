@@ -4,7 +4,7 @@ import styles from './about.module.css'
 export default function About() {
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Qui sommes-nous ?</h1>
+      <h1 className={styles.title}> Qui sommes-nous ?</h1>
       <p className={styles.p}>
         Klenn Couverture, c’est avant tout une équipe de professionnels passionnés par leur métier,
         au service de vos projets de construction et de rénovation dans toute la Loire-Atlantique.
