@@ -1,14 +1,10 @@
 import './globals.css'
+import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Klenn Couverture',
-  description:
-    "Klenn Couverture – Spécialiste en couverture et peinture dans le 44. Interventions rapides et travaux de qualité dans toute la Loire-Atlantique. Toitures, façades, intérieurs : votre expert local à votre service.",
-}
 
 export default function RootLayout({ children }) {
   return (
@@ -34,7 +30,9 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-17050234458');
           `}
         </Script>
-        {children}
+        <Header /> 
+          {children}
+        <Footer /> 
       </body>
     </html>
   )

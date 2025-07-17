@@ -89,9 +89,9 @@ export default function Carousel() {
           />
         ))}
       </div>  
-        <Link href="tel:0698144222" className={styles.call}>
-          📞 Appeler
-        </Link>
+      <Link href="tel:0698144222" className={styles.call}>
+        📞 Appeler
+      </Link>
     </div>
   );
 }
