@@ -89,9 +89,23 @@ export default function Carousel() {
           />
         ))}
       </div>  
-      <Link href="tel:0698144222" className={styles.call}>
-        📞 Appeler
-      </Link>
+      <Link
+  href="tel:0698144222"
+  className={styles.call}
+  onClick={() => {
+    if (typeof window !== "undefined") {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-17050234458/GT-WKR8X772', // Remplace avec ton étiquette exacte
+        event_callback: () => {
+          console.log("Conversion Appel déclenchée");
+        }
+      });
+    }
+  }}
+>
+  📞 Appeler
+</Link>
+
     </div>
   );
 }
