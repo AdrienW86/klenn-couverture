@@ -1,6 +1,6 @@
 .footer {
     z-index: 5;
-    height: 400px;
+    height: 470px;
     width: 100%;
     background-color: rgb(82,113,255);
 }
@@ -59,4 +59,15 @@
 .social {
     display: flex;
     justify-content: center;
+}
+
+.mentions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.link2 {
+    margin: 0 5px 10px 5px;
+    text-decoration: underline;
 }

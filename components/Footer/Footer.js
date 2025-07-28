@@ -38,9 +38,20 @@ export default function Footer() {
               />
             </Link>
        </div>
-      <a className={styles.link} href="https://code-v.fr" target="_blank" rel="noopener noreferrer">
+      <Link className={styles.link} href="https://code-v.fr" target="_blank" rel="noopener noreferrer">
         Réalisé par <span className={styles.codev}> Codev </span>
-      </a>
+      </Link>
+      <div className={styles.mentions}>       
+        <Link className={styles.link2} href="/mentions">
+          Mentions légales
+        </Link>
+        <Link className={styles.link2} href="/conditions">
+          Conditions d'utilisations
+        </Link>
+        <Link className={styles.link2} href="/politique">
+          Politique de confidentialité
+        </Link>
+      </div>
       <p className={styles.txt}> © {currentYear}. Tous droits réservés. </p>
     </footer>
   )
