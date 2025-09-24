@@ -29,38 +29,66 @@ export default function Gallery() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
+  const [secondImage, setSecondImage] = useState(null); // pour avant/après
+  const [sliderValue, setSliderValue] = useState(50); // pour avant/après
 
-  // Ouvrir la lightbox
-  const openLightbox = (imageSrc) => {
+  const openLightbox = (imageSrc, secondSrc = null) => {
     setCurrentImage(imageSrc);
+    setSecondImage(secondSrc);
+    setSliderValue(50);
     setIsOpen(true);
   };
 
-  // Fermer la lightbox
-  const closeLightbox = () => {
-    setIsOpen(false);
-  };
+  const closeLightbox = () => setIsOpen(false);
 
   return (
     <div>
       <div className={styles.gallery}>
         {images.map((image, index) => (
-          <div className={styles.imageWrapper} key={index} onClick={() => openLightbox(image.src)}>
+          <div
+            key={index}
+            className={styles.imageWrapper}
+            onClick={() => openLightbox(image.src)}
+          >
             <Image
               src={image.src}
               alt={image.alt}
               width={300}
               height={200}
+              style={{ objectFit: 'cover' }}
               className={styles.image}
+              priority
             />
           </div>
         ))}
       </div>
-      {/* Lightbox */}
+
       {isOpen && (
         <div className={styles.lightboxOverlay} onClick={closeLightbox}>
-          <div className={styles.lightboxContent}>
-            <img src={currentImage} alt="Lightbox" className={styles.lightboxImage} />
+          <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
+            {secondImage ? (
+              <div className={styles.beforeAfter}>
+                <div className={styles.after} style={{ width: `${sliderValue}%` }}>
+                  <Image src={secondImage} alt="Après" fill style={{ objectFit: 'cover' }} />
+                </div>
+                <Image src={currentImage} alt="Avant" fill style={{ objectFit: 'cover' }} />
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value={sliderValue}
+                  onChange={(e) => setSliderValue(e.target.value)}
+                  className={styles.slider}
+                />
+              </div>
+            ) : (
+              <Image
+                src={currentImage}
+                alt="Lightbox"
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            )}
           </div>
         </div>
       )}
