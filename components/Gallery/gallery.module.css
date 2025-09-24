@@ -1,70 +1,60 @@
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
-  margin: 0 auto;
-  padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:  20px auto;
+    width: 100%;
+  }
+  
+  .imageWrapper {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 300px; /* Assure que les vignettes occupent toute la largeur du grid */
+    height: 200px; /* Hauteur fixe */
+  }
+  
+
+.image {
+  
 }
 
-.imageWrapper {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 200px;
-}
-
-.imageWrapper:hover .image {
-  transform: scale(1.05);
-}
-
-.lightboxOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightboxContent {
-  position: relative;
-  width: 90%;
-  height: 90vh;
-}
-
-.lightboxImage {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Avant / Après */
-.beforeAfter {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.beforeAfter img,
-.beforeAfter div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-}
-
-.beforeAfter .after {
-  overflow: hidden;
-}
-
-.slider {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-}
+  
+  .imageWrapper:hover .image {
+    transform: scale(1.05);
+  }
+  
+  /* Style de la lightbox */
+  .lightboxOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .lightboxContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lightboxImage {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;  /* L'image s'adapte tout en maintenant son ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .lightboxOverlay:hover {
+    cursor: pointer;
+  }
+  
