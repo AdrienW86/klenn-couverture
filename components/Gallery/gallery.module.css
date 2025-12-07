@@ -15,12 +15,6 @@
     height: 200px; /* Hauteur fixe */
   }
   
-
-.image {
-  
-}
-
-  
   .imageWrapper:hover .image {
     transform: scale(1.05);
   }
