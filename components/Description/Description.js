@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link'; // Importation nécessaire
 
 const services = [
   {
@@ -10,24 +11,28 @@ const services = [
     title: 'Travaux de Couverture',
     location: 'Nantes & Loire-Atlantique',
     text: 'Intervention sur tous types de toitures (tuiles, ardoises, bac acier, zinc) pour une étanchéité optimale et une longévité maximale.',
+    href: '/couverture', // Route vers ta page couverture
   },
   {
     img: '/image20.avif',
     title: 'Peinture Professionnelle',
     location: 'Intérieur & Extérieur',
     text: 'Utilisation de produits pros adaptés au climat du 44. Finitions nettes pour vos façades et vos murs intérieurs.',
+    href: '/peinture', // Route vers ta page peinture
   },
   {
     img: '/image18.avif',
     title: 'Maçonnerie Générale',
     location: 'Gros œuvre & Rénovation',
     text: 'Terrasses, murets et ravalement de façade. Un savoir-faire garantissant des ouvrages solides respectant les règles de l’art.',
+    href: '/construction', // Route vers ta page maçonnerie
   },
   {
     img: '/image13.avif',
     title: 'Matériel Professionnel',
     location: 'Sécurité & Efficacité',
     text: 'Équipements de pointe et méthodes éprouvées pour des chantiers sécurisés et des délais respectés.',
+    href: '/savoir-faire', // Route vers ta page à propos/matériel
   },
 ];
 
@@ -63,7 +68,7 @@ export default function Description() {
           </div>
         </div>
 
-        {/* SECTION POURQUOI NOUS ? (GRILLE DE SERVICES) */}
+        {/* SECTION POURQUOI NOUS ? */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
             Pourquoi nous faire confiance ?
@@ -80,8 +85,8 @@ export default function Description() {
               viewport={{ once: true, margin: "-100px" }}
               className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-20`}
             >
-              {/* IMAGE AVEC EFFET HOVER */}
-              <div className="w-full md:w-1/2 group">
+              {/* IMAGE */}
+              <Link href={item.href} className="w-full md:w-1/2 group cursor-pointer">
                 <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-lg border-4 border-slate-50 transition-transform duration-500 group-hover:scale-[1.02]">
                   <Image
                     src={item.img}
@@ -93,7 +98,7 @@ export default function Description() {
                     <p className="text-white font-semibold">{item.location}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
 
               {/* TEXTE */}
               <div className="w-full md:w-1/2 space-y-4">
@@ -107,9 +112,13 @@ export default function Description() {
                   {item.text}
                 </p>
                 <div className="pt-4">
-                  <button className="text-blue-600 font-bold hover:translate-x-2 transition-transform flex items-center gap-2">
-                    En savoir plus <span>→</span>
-                  </button>
+                  {/* REMPLACEMENT DU BUTTON PAR LINK */}
+                  <Link 
+                    href={item.href}
+                    className="text-blue-600 font-bold hover:translate-x-2 transition-transform inline-flex items-center gap-2 group"
+                  >
+                    En savoir plus <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </Link>
                 </div>
               </div>
             </motion.div>
