@@ -1,117 +1,121 @@
-'use client';
+"use client";
 
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import styles from './description.module.css';
+
+const services = [
+  {
+    img: '/image5.avif',
+    title: 'Travaux de Couverture',
+    location: 'Nantes & Loire-Atlantique',
+    text: 'Intervention sur tous types de toitures (tuiles, ardoises, bac acier, zinc) pour une étanchéité optimale et une longévité maximale.',
+  },
+  {
+    img: '/image20.avif',
+    title: 'Peinture Professionnelle',
+    location: 'Intérieur & Extérieur',
+    text: 'Utilisation de produits pros adaptés au climat du 44. Finitions nettes pour vos façades et vos murs intérieurs.',
+  },
+  {
+    img: '/image18.avif',
+    title: 'Maçonnerie Générale',
+    location: 'Gros œuvre & Rénovation',
+    text: 'Terrasses, murets et ravalement de façade. Un savoir-faire garantissant des ouvrages solides respectant les règles de l’art.',
+  },
+  {
+    img: '/image13.avif',
+    title: 'Matériel Professionnel',
+    location: 'Sécurité & Efficacité',
+    text: 'Équipements de pointe et méthodes éprouvées pour des chantiers sécurisés et des délais respectés.',
+  },
+];
 
 export default function Description() {
-  const refs = Array.from({ length: 13 }, () => useInView({ triggerOnce: false, threshold: 0.0 }));
-
-  const services = [
-    {
-      img: '/image5.avif',
-      alt: 'toiture en travaux',
-      p: 'Travaux de couverture à Nantes et ses environs',
-      text: 'Nous intervenons sur tous types de toitures (tuiles, ardoises, bac acier, zinc...) dans toute la Loire-Atlantique, en respectant les normes pour une étanchéité optimale et une longévité maximale.',
-      imgRef: 5,
-      pRef: 6,
-    },
-    {
-      img: '/image20.avif',
-      alt: 'chantier de peinture extérieure',
-      p: 'Peinture soignée pour intérieur et extérieur',
-      text: 'Nos prestations de peinture sont réalisées avec des produits professionnels, adaptés aux conditions climatiques de la région. Finitions nettes, durables et esthétiques.',
-      imgRef: 8,
-      pRef: 7,
-    },
-    {
-      img: '/image18.avif',
-      alt: 'maçonnerie',
-      p: 'Maçonnerie de qualité pour tous vos projets',
-      text: 'Que ce soit pour un mur, un muret, une terrasse ou la rénovation d’une façade, notre savoir-faire garantit des ouvrages solides et durables dans le respect des règles de l’art.',
-      imgRef: 9,
-      pRef: 10,
-    },
-    {
-      img: '/image13.avif',
-      alt: 'matériel professionnel',
-      p: 'Matériel adapté et méthodes efficaces',
-      text: 'Nous utilisons du matériel professionnel et des techniques éprouvées pour assurer des chantiers sécurisés, rapides et parfaitement réalisés.',
-      imgRef: 12,
-      pRef: 11,
-    },
-  ];
-
   return (
-    <AnimatePresence>
-      <section className={styles.description}>
-        <div className={styles.box}>
-          <h2 className={styles.h2}>Zone d'intervention</h2>
-        </div>
-        <motion.section className={styles.localisation}>
-          <Image
-            src="/image1.avif"
-            alt="artisan en toiture"
-            width={400}
-            height={400}
-            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className={styles.image}
-          />
-          <div className={styles.intro}>
-            <motion.p
-              ref={refs[3].ref}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: refs[3].inView ? 1 : 0, y: refs[3].inView ? 0 : 50 }}
-              exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.5 }}
-            >
-              Basée en Loire-Atlantique (44), notre entreprise intervient dans tout le département :
-              Nantes, Saint-Nazaire, Rezé, Saint-Herblain, Pornic, Châteaubriant, et les communes avoisinantes.
-              Nous nous déplaçons rapidement pour vos travaux de couverture, peinture et maçonnerie.
-            </motion.p>
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
+        
+        {/* SECTION ZONE D'INTERVENTION */}
+        <div className="mb-24">
+          <div className="flex flex-col md:flex-row items-center gap-12 bg-slate-900 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="md:w-1/2 relative h-[300px] md:h-[450px] w-full">
+              <Image
+                src="/image1.avif"
+                alt="Artisan Klenn Couverture"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="md:w-1/2 p-8 md:p-12 text-white">
+              <h2 className="text-3xl font-bold mb-6 text-blue-400">Zone d'intervention</h2>
+              <p className="text-lg text-slate-300 leading-relaxed italic">
+                "Basée en Loire-Atlantique (44), notre entreprise intervient dans tout le département : 
+                Nantes, Saint-Nazaire, Rezé, Saint-Herblain, Pornic, Châteaubriant..."
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-4 text-sm font-medium">
+                <div className="flex items-center gap-2">✅ Devis Gratuit</div>
+                <div className="flex items-center gap-2">✅ Déplacement Rapide</div>
+                <div className="flex items-center gap-2">✅ Garantie Décennale</div>
+                <div className="flex items-center gap-2">✅ Matériaux Pros</div>
+              </div>
+            </div>
           </div>
-        </motion.section>
+        </div>
 
-        <div className={styles.box}>
-          <h2 className={styles.h2}>Pourquoi nous faire confiance ?</h2>
+        {/* SECTION POURQUOI NOUS ? (GRILLE DE SERVICES) */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4">
+            Pourquoi nous faire confiance ?
+          </h2>
+          <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full" />
         </div>
-        <section className={styles.background}>
-          <div className={styles.article}>
-            <ul>
-              {services.map((item, index) => (
-                <li key={index} className={styles.li}>
-                  <motion.img
-                    ref={refs[item.imgRef].ref}
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: refs[item.imgRef].inView ? 1 : 0, x: refs[item.imgRef].inView ? 0 : -100 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 0.5 }}
+
+        <div className="space-y-20">
+          {services.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-20`}
+            >
+              {/* IMAGE AVEC EFFET HOVER */}
+              <div className="w-full md:w-1/2 group">
+                <div className="relative h-[350px] w-full rounded-2xl overflow-hidden shadow-lg border-4 border-slate-50 transition-transform duration-500 group-hover:scale-[1.02]">
+                  <Image
                     src={item.img}
-                    alt={item.alt}
-                    width={300}
-                    height={300}
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className={styles.picture}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
                   />
-                  <motion.p
-                    ref={refs[item.pRef].ref}
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: refs[item.pRef].inView ? 1 : 0, x: refs[item.pRef].inView ? 0 : 100 }}
-                    exit={{ opacity: 0, x: 100 }}
-                    transition={{ duration: 0.5 }}
-                    className={styles.p}
-                  >
-                    <span className={styles.span}>{item.p}</span>
-                    {item.text}
-                  </motion.p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </section>
-    </AnimatePresence>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-semibold">{item.location}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* TEXTE */}
+              <div className="w-full md:w-1/2 space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-800">
+                  {item.title}
+                </h3>
+                <p className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                  {item.location}
+                </p>
+                <p className="text-slate-600 text-lg leading-relaxed">
+                  {item.text}
+                </p>
+                <div className="pt-4">
+                  <button className="text-blue-600 font-bold hover:translate-x-2 transition-transform flex items-center gap-2">
+                    En savoir plus <span>→</span>
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

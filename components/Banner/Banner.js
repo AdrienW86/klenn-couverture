@@ -1,111 +1,116 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import Link from 'next/link';
-import styles from './banner.module.css';
 
 const images = [
-  '/image1.avif',
-  '/image2.avif',
-  '/image3.avif', 
-  '/image4.avif', 
-  '/image5.avif',
-  '/image6.avif',
-  '/image7.avif',
-  '/image8.avif',
-  '/image9.avif',
-  '/image10.avif',
+  '/image1.avif', '/image2.avif', '/image3.avif', '/image4.avif', '/image5.avif',
+  '/image6.avif', '/image7.avif', '/image8.avif', '/image9.avif', '/image10.avif',
 ];
 
-export default function Carousel() {
+export default function HeroBanner() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: false, threshold: 0.0 });
-  
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); 
-
-    return () => clearInterval(interval); 
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className={styles.carousel} id="carouselExampleFade">
-      <Image          
-            src="/garantie.png"
-            alt="garantie decenale"
-            width={140}
-            height={140}
-            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className={styles.image}
+    <section className="relative h-[85vh] w-full overflow-hidden bg-slate-900">
+      {/* CAROUSEL D'IMAGES */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={images[currentIndex]}
+            alt="Chantier Klenn Couverture"
+            fill
+            className="object-cover"
+            priority
           />
-        <div className={styles.btnContainer}>
-            <motion.a 
-              className={styles.btn} 
-              href="/contact"
-              ref={ref1}  
-              initial={{ opacity: 0, x: -50 }} 
-              animate={{
-                opacity: inView1 ? 1 : 0,
-                x: inView1 ? 0 : -50,
-              }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
-            > 
-              Devis gratuit
-            </motion.a>
-            <motion.a 
-              className={styles.btn2} 
-              href="/pictures"
-              ref={ref2}  
-              initial={{ opacity: 0, x: 50 }} 
-              animate={{
-                opacity: inView2 ? 1 : 0,
-                x: inView2 ? 0 : 50,
-              }}
-              exit={{ opacity: 0, x: 50 }}
-              transition={{ duration: 0.3 }}
-            > 
-              Nos réalisations 
-            </motion.a>
-       
-        </div>
-      <div className={styles.carouselInner}>
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={`${styles.carouselItem} ${index === currentIndex ? styles.active : ''}`}
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              height: '85vh', 
-            }}
-          />
-        ))}
-      </div>  
-      <Link
-  href="tel:0698144222"
-  className={styles.call}
-  onClick={() => {
-    if (typeof window !== "undefined") {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-17050234458/GT-WKR8X772', // Remplace avec ton étiquette exacte
-        event_callback: () => {
-          console.log("Conversion Appel déclenchée");
-        }
-      });
-    }
-  }}
->
-  📞 Appeler
-</Link>
+          {/* Overlay pour la lisibilité */}
+          <div className="absolute inset-0 bg-black/40" />
+        </motion.div>
+      </AnimatePresence>
 
-    </div>
+      {/* CONTENU CENTRAL */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+        
+        {/* Badge Garantie Décennale */}
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="mb-6"
+        >
+          <Image          
+            src="/garantie.png"
+            alt="Garantie décennale"
+            width={120}
+            height={120}
+            className="drop-shadow-xl"
+          />
+        </motion.div>
+
+        {/* Titre Accroche */}
+        <motion.h1 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-white text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg"
+        >
+          K L E N N <span className="text-blue-500">C O U V E R T U R E</span>
+        </motion.h1>
+        
+        <motion.p 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="text-slate-100 text-lg md:text-xl mb-8 max-w-2xl font-light"
+        >
+          Expertise en toiture, ravalement et maçonnerie. <br /> Votre artisan de confiance pour un habitat protégé.
+        </motion.p>
+
+        {/* BOUTONS */}
+        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md justify-center">
+          <Link 
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
+          >
+            Devis gratuit
+          </Link>
+          <Link 
+            href="/pictures"
+            className="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center"
+          >
+            Nos réalisations
+          </Link>
+        </div>
+      </div>
+
+      {/* BOUTON APPEL FLOTTANT (Optionnel dans la bannière, souvent mieux en bas à droite) */}
+      <Link
+        href="tel:0698144222"
+        className="absolute bottom-8 right-8 z-30 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center gap-2 font-bold"
+        onClick={() => {
+          if (typeof window !== "undefined" && window.gtag) {
+            window.gtag('event', 'conversion', { 'send_to': 'AW-17050234458/GT-WKR8X772' });
+          }
+        }}
+      >
+        <span className="text-xl">📞</span> 
+        <span className="hidden md:inline">Appeler maintenant</span>
+      </Link>
+    </section>
   );
 }
