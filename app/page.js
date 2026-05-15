@@ -1,7 +1,6 @@
 import Banner from '@/components/Banner/Banner'
 import Equipment from '@/components/Equipment/Equipment'
 import Description from '@/components/Description/Description'
-import styles from './page.module.css'
 
 export const metadata = {
   title: 'Klenn Couverture - Couvreur à Nantes',
@@ -11,7 +10,8 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    // On retire className={styles.main} au profit d'un background propre
+    <main className="min-h-screen bg-white">
       <Banner />
       <Equipment />
       <Description />        
