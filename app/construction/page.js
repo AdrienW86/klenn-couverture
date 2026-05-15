@@ -1,5 +1,5 @@
 import SimpleBanner from '@/components/SimpleBanner/SimpleBanner'
-import ConstructionMenu from '@/components/ConstructionMenu/Menu'
+import Menu from '@/components/ConstructionMenu/Menu'
 
 export const metadata = {
   title: 'Maçonnerie à Nantes - Klenn Couverture',
@@ -9,9 +9,9 @@ export const metadata = {
 
 export default function page() {
   return (
-    <main>
-      <SimpleBanner />
-      <ConstructionMenu />   
+    <main className="bg-white">
+      <SimpleBanner title="Maçonnerie" />
+      <Menu />   
     </main>
   )
 }

@@ -10,7 +10,7 @@ export const metadata = {
 export default function page() {
   return (
     <main>
-      <SimpleBanner />
+     <SimpleBanner title="Peinture & Ravalement" />
       <PeintureMenu />   
     </main>
   )

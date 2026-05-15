@@ -1,5 +1,4 @@
 import Gallery from '@/components/Gallery/Gallery'
-import styles from '../page.module.css'
 
 export const metadata = {
   title: 'Nos Réalisations - Klenn Couverture Nantes',
@@ -9,8 +8,8 @@ export const metadata = {
 
 export default function Pictures() {
   return (
-    <main className={styles.main}>
-     <h2 className={styles.h2}>  Nos réalisations </h2>
+    // 'pt-24' permet de ne pas cacher le haut de la page sous ton Header fixe
+    <main className="min-h-screen bg-white pt-24">
       <Gallery />    
     </main>
   )

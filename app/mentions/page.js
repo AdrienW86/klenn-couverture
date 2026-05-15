@@ -1,83 +1,90 @@
-import React from 'react'
+export const metadata = {
+  title: 'Mentions Légales - Klenn Couverture Nantes',
+  description: 'Informations légales de l’entreprise Klenn Couverture, couvreur à Bouguenais et Nantes.',
+  robots: 'noindex, follow',
+}
 
-export default function page() {
+export default function MentionsLegales() {
   return (
-       <main
-      style={{
-        maxWidth: 1000,
-        margin: 'auto',
-        padding: '2rem',
-        fontFamily: 'Arial, sans-serif',
-        lineHeight: 1.6,
-        backgroundColor: 'aliceblue',
-        color: 'black',
-        boxShadow: '0 0 10px rgba(0,0,0,0.1)'
-      }}
-    >
-      <h1>Mentions légales</h1>
+    <main className="min-h-screen bg-slate-50 pt-32 md:pt-40 pb-20 px-4">
+      <div className="max-w-4xl mx-auto bg-white p-8 md:p-16 rounded-[40px] shadow-sm border border-slate-100">
+        
+        <header className="mb-12 border-b border-slate-100 pb-8 text-center md:text-left">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Mentions Légales
+          </h1>
+          <p className="text-slate-500 font-medium italic">Conformément à la loi n° 2004-575 du 21 juin 2004 (LCEN)</p>
+        </header>
 
-      <section>
-        <h2>Éditeur du site</h2>
-        <p>
-          <strong>Klenn Couverture</strong>
-          <br />
-          Auto-entreprise
-          <br />
-          19 rue Johannes Gutenberg
-          <br />
-          44340 Bouguenais
-          <br />
-          SIRET : 981 560 386 00014
-          <br />
-          TVA intracommunautaire : FR81981560386
-          <br />
-          Directrice de la publication : Carla Gurtner
-          <br />
-          Contact :{' '}
-          <a href="mailto:klenngurtner@gmail.com" style={{ color: 'black', textDecoration: 'underline' }}>
-            klenngurtner@gmail.com
-          </a>{' '}
-          – 06 98 14 42 22
-        </p>
-      </section>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          
+          {/* ÉDITEUR DU SITE */}
+          <section className="space-y-4">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <span className="text-blue-600">🏠</span> Éditeur du site
+            </h2>
+            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-slate-600 leading-relaxed shadow-sm">
+              <p className="font-bold text-slate-900 text-lg">Klenn Couverture</p>
+              <p>Entreprise Individuelle</p>
+              <p className="mt-2">19 rue Johannes Gutenberg</p>
+              <p>44340 Bouguenais</p>
+              <div className="mt-4 pt-4 border-t border-slate-200 text-sm">
+                <p><strong>SIRET :</strong> 798 282 695 00047</p>
+                <p><strong>TVA :</strong> FR81981560386</p>
+                <p className="mt-2"><strong>Directeur :</strong> Klenn Pierreuse</p>
+              </div>
+            </div>
+          </section>
 
-      <section>
-        <h2>Hébergement du site</h2>
-        <p>
-          <strong>Codev</strong>
-          <br />
-          42 avenue Emile Roudayre
-          <br />
-          Perpignan
-          <br />
-          Téléphone : 06.66.67.27.09
-        </p>
-      </section>
+          {/* HÉBERGEMENT & CONTACT */}
+          <div className="space-y-8">
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                <span className="text-blue-600">🌐</span> Hébergement
+              </h2>
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-slate-600 text-sm">
+                <p className="font-bold text-slate-900">Codev</p>
+                <p>42 avenue Emile Roudayre</p>
+                <p>Perpignan</p>
+                <p className="mt-2 text-blue-600">06.66.67.27.09</p>
+              </div>
+            </section>
 
-      <section>
-        <h2>Propriété intellectuelle</h2>
-        <p>
-          L’ensemble du contenu présent sur ce site (textes, images, logos, vidéos) est la propriété exclusive de Klenn Couverture ou de ses partenaires et est protégé par le droit d’auteur. Toute
-          reproduction, modification, distribution ou utilisation sans autorisation est interdite.
-        </p>
-      </section>
+            <section className="space-y-4">
+              <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                <span className="text-blue-600">✉️</span> Contact
+              </h2>
+              <div className="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200">
+                <p className="text-sm opacity-90 mb-1">Email professionnel :</p>
+                <a href="mailto:klenngurtner@gmail.com" className="font-bold hover:underline break-all">
+                  klenngurtner@gmail.com
+                </a>
+                <p className="text-sm opacity-90 mt-4 mb-1">Téléphone :</p>
+                <a href="tel:0698144222" className="text-xl font-bold hover:underline">
+                  06 98 14 42 22
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
 
-      <section>
-        <h2>Responsabilité</h2>
-        <p>
-          Klenn Couverture s’efforce d’assurer l’exactitude et la mise à jour des informations diffusées sur ce site, mais ne peut garantir leur exhaustivité ni leur parfaite fiabilité.
-        </p>
-      </section>
+        {/* TEXTES LÉGAUX BAS DE PAGE */}
+        <div className="mt-16 space-y-8 pt-8 border-t border-slate-100 text-slate-600 text-sm md:text-base leading-relaxed">
+          <section>
+            <h3 className="font-bold text-slate-900 mb-2">Propriété intellectuelle</h3>
+            <p>
+              L’ensemble du contenu présent sur ce site (textes, photographies, logos) est la propriété exclusive de <strong>Klenn Couverture</strong>. Toute reproduction ou utilisation sans autorisation préalable constitue une contrefaçon sanctionnée par le Code de la propriété intellectuelle.
+            </p>
+          </section>
 
-      <section>
-        <h2>Données personnelles</h2>
-        <p>
-          Les données collectées via ce site sont uniquement utilisées pour répondre aux demandes des utilisateurs. Conformément à la loi Informatique et Libertés, vous disposez d’un droit d’accès, de
-          modification et de suppression des données vous concernant en contactant Klenn Couverture.
-        </p>
-      </section>
+          <section>
+            <h3 className="font-bold text-slate-900 mb-2">Responsabilité</h3>
+            <p>
+              Klenn Couverture met tout en œuvre pour diffuser des informations exactes. Toutefois, l'entreprise ne saurait être tenue responsable d'éventuelles erreurs ou de l'indisponibilité temporaire du site.
+            </p>
+          </section>
+        </div>
+      </div>
     </main>
   );
 }
-  
-

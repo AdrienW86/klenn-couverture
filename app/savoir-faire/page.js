@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function page() {
   return (
-    <main>
-      <SimpleBanner />
+    <main className="bg-white">
+     <SimpleBanner title="Notre Histoire" />
       <About /> 
     </main>
   )

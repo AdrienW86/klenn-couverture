@@ -1,44 +1,104 @@
+export const metadata = {
+  title: 'Politique de Confidentialité - Klenn Couverture',
+  robots: 'noindex, follow',
+}
+
 export default function PolitiqueConfidentialite() {
   return (
-    <main style={{ backgroundColor: 'aliceblue', color: 'black', padding: '2rem', maxWidth: '1000px', margin: 'auto' }}>
-      <h1>Politique de Confidentialité</h1>
+    <main className="min-h-screen bg-slate-50 pt-32 md:pt-40 pb-20 px-4">
+      <div className="max-w-4xl mx-auto bg-white p-8 md:p-16 rounded-[40px] shadow-sm border border-slate-100">
+        
+        <header className="mb-12 border-b border-slate-100 pb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Politique de Confidentialité
+          </h1>
+          <p className="text-slate-500 italic">En vigueur au 15 Mai 2026</p>
+        </header>
 
-      <p>Chez Klenn Couverture, nous attachons une grande importance à la protection de vos données personnelles. Cette politique explique quelles données nous collectons, pourquoi, et comment nous les utilisons.</p>
+        <div className="space-y-10 text-slate-600 leading-relaxed">
+          
+          <section>
+            <p className="text-lg">
+              Chez <strong>Klenn Couverture</strong>, la protection de votre vie privée est une priorité. Cette politique vous informe sur la manière dont nous traitons les données personnelles que vous nous confiez lors de l'utilisation de notre site.
+            </p>
+          </section>
 
-      <h2>1. Données collectées</h2>
-      <p>Nous collectons les informations que vous nous fournissez via notre formulaire de contact, notamment :</p>
-      <ul>
-        <li>Nom</li>
-        <li>Adresse email</li>
-        <li>Numéro de téléphone</li>
-      </ul>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">01.</span> Collecte des données
+            </h2>
+            <p className="mb-4">
+              Nous collectons uniquement les informations strictement nécessaires pour traiter vos demandes de devis ou de renseignements. Cela inclut :
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <li className="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center gap-2">
+                <span className="text-blue-500">✓</span> Nom et prénom
+              </li>
+              <li className="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center gap-2">
+                <span className="text-blue-500">✓</span> Adresse email
+              </li>
+              <li className="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center gap-2">
+                <span className="text-blue-500">✓</span> Numéro de téléphone
+              </li>
+              <li className="bg-slate-50 p-3 rounded-xl border border-slate-100 flex items-center gap-2">
+                <span className="text-blue-500">✓</span> Type de projet (sujet)
+              </li>
+            </ul>
+          </section>
 
-      <h2>2. Utilisation des données</h2>
-      <p>Ces données sont utilisées uniquement pour répondre à vos demandes, vous fournir des informations ou des devis, et pour assurer le suivi de nos échanges.</p>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">02.</span> Utilisation et Finalité
+            </h2>
+            <p>
+              Vos données sont exclusivement utilisées par Klenn Couverture pour :
+            </p>
+            <ul className="list-disc ml-6 mt-2 space-y-1">
+              <li>L'établissement de vos devis personnalisés.</li>
+              <li>La prise de contact pour organiser une visite de chantier.</li>
+              <li>Le suivi administratif de votre dossier.</li>
+            </ul>
+            <p className="mt-4 font-medium text-slate-800 bg-blue-50 p-4 rounded-xl border border-blue-100">
+              ⚠️ <strong>Important :</strong> Nous ne vendons, n'échangeons, ni ne transférons jamais vos données à des tiers à des fins commerciales.
+            </p>
+          </section>
 
-      <h2>3. Conservation des données</h2>
-      <p>Nous conservons vos données personnelles pendant une durée maximale de 3 ans après notre dernier contact, conformément aux obligations légales.</p>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">03.</span> Conservation et Sécurité
+            </h2>
+            <p>
+              Nous conservons vos données pendant une durée de <strong>3 ans</strong> à compter de notre dernier échange. Pour protéger vos informations, notre site utilise un protocole de sécurisation <strong>HTTPS</strong> et nous limitons l'accès aux données aux seules personnes habilitées au sein de l'entreprise.
+            </p>
+          </section>
 
-      <h2>4. Sécurité</h2>
-      <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, divulgation ou destruction.</p>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">04.</span> Vos Droits (RGPD)
+            </h2>
+            <p className="mb-4">
+              Conformément à la réglementation européenne, vous disposez d’un droit d’accès, de rectification, d'opposition et de suppression de vos données.
+            </p>
+            <div className="bg-slate-900 p-6 rounded-2xl text-white">
+              <p className="text-sm mb-4">Pour exercer vos droits, contactez notre responsable de traitement :</p>
+              <p className="font-bold">Klenn Gurtner</p>
+              <a href="mailto:klenngurtner@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors underline break-all">
+                klenngurtner@gmail.com
+              </a>
+            </div>
+          </section>
 
-      <h2>5. Vos droits</h2>
-      <p>Vous disposez des droits suivants concernant vos données personnelles :</p>
-      <ul>
-        <li>Droit d’accès</li>
-        <li>Droit de rectification</li>
-        <li>Droit à l’effacement</li>
-        <li>Droit de limitation du traitement</li>
-        <li>Droit d’opposition</li>
-        <li>Droit à la portabilité</li>
-      </ul>
-      <p>Pour exercer ces droits, vous pouvez nous contacter à l’adresse suivante : <a href="mailto:klenngurtner@gmail.com">klenngurtner@gmail.com</a>.</p>
+          <section>
+            <h2 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <span className="text-blue-600">05.</span> Cookies
+            </h2>
+            <p>
+              Notre site n’utilise pas de cookies publicitaires. Seuls des cookies techniques essentiels au bon fonctionnement et à la sécurité du site peuvent être déposés sur votre terminal.
+            </p>
+          </section>
 
-      <h2>6. Cookies</h2>
-      <p>Notre site n’utilise pas de cookies à des fins de suivi ou de publicité. Seuls les cookies strictement nécessaires au fonctionnement du site peuvent être utilisés.</p>
-
-      <h2>7. Contact</h2>
-      <p>Pour toute question relative à la protection de vos données personnelles, contactez-nous à <a href="mailto:klenngurtner@gmail.com">klenngurtner@gmail.com</a>.</p>
+        </div>
+      </div>
     </main>
   );
 }

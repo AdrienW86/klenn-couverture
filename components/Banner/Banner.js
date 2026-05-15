@@ -99,17 +99,24 @@ export default function HeroBanner() {
       </div>
 
       {/* BOUTON APPEL FLOTTANT (Optionnel dans la bannière, souvent mieux en bas à droite) */}
+      {/* BOUTON APPEL - VERSION BUREAU UNIQUEMENT */}
+      {/* La classe 'hidden md:flex' est la clé : caché par défaut, affiché à partir de 768px */}
       <Link
         href="tel:0698144222"
-        className="absolute bottom-8 right-8 z-30 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center gap-2 font-bold"
+        className="hidden md:flex absolute bottom-8 right-8 z-30 bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white px-6 py-4 rounded-full shadow-2xl transition-all hover:scale-105 items-center gap-3 font-bold"
         onClick={() => {
           if (typeof window !== "undefined" && window.gtag) {
             window.gtag('event', 'conversion', { 'send_to': 'AW-17050234458/GT-WKR8X772' });
           }
         }}
       >
-        <span className="text-xl">📞</span> 
-        <span className="hidden md:inline">Appeler maintenant</span>
+        <div className="bg-green-500 p-2 rounded-full animate-pulse">
+          <span className="text-xl">📞</span> 
+        </div>
+        <div className="flex flex-col items-start">
+          <span className="text-[10px] uppercase opacity-70 leading-none">Besoin d'un artisan ?</span>
+          <span className="text-lg">06 98 14 42 22</span>
+        </div>
       </Link>
     </section>
   );

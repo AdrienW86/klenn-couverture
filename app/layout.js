@@ -1,5 +1,6 @@
 import './globals.css'
 import Header from '@/components/Header/Header'
+import FloatingCall from '@/components/FloatingCall';
 import Footer from '@/components/Footer/Footer'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         <Header /> 
           {children}
         <Footer /> 
+        <FloatingCall /> {/* Il sera présent sur toutes les pages */}
       </body>
     </html>
   )
