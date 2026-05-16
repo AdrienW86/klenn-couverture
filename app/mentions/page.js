@@ -56,8 +56,8 @@ export default function MentionsLegales() {
               </h2>
               <div className="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200">
                 <p className="text-sm opacity-90 mb-1">Email professionnel :</p>
-                <a href="mailto:klenngurtner@gmail.com" className="font-bold hover:underline break-all">
-                  klenngurtner@gmail.com
+                <a href="mailto:klenn-couverture.fr" className="font-bold hover:underline break-all">
+                  contact@klenn-couverture.fr
                 </a>
                 <p className="text-sm opacity-90 mt-4 mb-1">Téléphone :</p>
                 <a href="tel:0698144222" className="text-xl font-bold hover:underline">

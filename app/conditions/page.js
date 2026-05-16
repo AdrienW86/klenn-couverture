@@ -89,8 +89,8 @@ export default function ConditionsUtilisation() {
           <footer className="mt-12 pt-8 border-t border-slate-100">
             <p className="text-sm">
               Pour toute question relative à ces conditions, contactez-nous : <br />
-              <a href="mailto:klenngurtner@gmail.com" className="text-blue-600 font-bold hover:underline">
-                klenngurtner@gmail.com
+              <a href="mailto:contact@klenn-couverture.fr" className="text-blue-600 font-bold hover:underline">
+                contact@klenn-couverture.fr
               </a>
             </p>
           </footer>

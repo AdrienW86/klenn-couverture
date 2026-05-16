@@ -81,9 +81,9 @@ export default function PolitiqueConfidentialite() {
             </p>
             <div className="bg-slate-900 p-6 rounded-2xl text-white">
               <p className="text-sm mb-4">Pour exercer vos droits, contactez notre responsable de traitement :</p>
-              <p className="font-bold">Klenn Gurtner</p>
-              <a href="mailto:klenngurtner@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors underline break-all">
-                klenngurtner@gmail.com
+              <p className="font-bold">Klenn Pierreuse</p>
+              <a href="mailto:contact@klenn-couverture.fr" className="text-blue-400 hover:text-blue-300 transition-colors underline break-all">
+                contact@klenn-couverture.fr
               </a>
             </div>
           </section>
