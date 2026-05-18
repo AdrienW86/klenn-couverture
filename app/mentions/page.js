@@ -26,8 +26,8 @@ export default function MentionsLegales() {
             <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-slate-600 leading-relaxed shadow-sm">
               <p className="font-bold text-slate-900 text-lg">Klenn Couverture</p>
               <p>Entreprise Individuelle</p>
-              <p className="mt-2">19 rue Johannes Gutenberg</p>
-              <p>44340 Bouguenais</p>
+              <p className="mt-2">108 RUE ARISTIDE BRIAND</p>
+              <p>44400 REZE - FRANCE</p>
               <div className="mt-4 pt-4 border-t border-slate-200 text-sm">
                 <p><strong>SIRET :</strong> 798 282 695 00047</p>
                 <p><strong>TVA :</strong> FR81981560386</p>
